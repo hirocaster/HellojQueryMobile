@@ -7,14 +7,31 @@
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
 </head> 
 <body> 
-<div data-role="page">
+<div data-role="page" id="one">
   <div data-role="header">
     <h1>Page Title</h1>
     </div><!-- /header -->
   <div data-role="content">
     <p>Page content goes here.</p>
     <p><a href="index.html">Live Link</a>
-    <p><a href="notpage.html">Dead Link</a>
+    <p><a href="index.html" data-rel="dialog" data-transition="pop">Dialog Popup Link</a>
+    <p><a href="notpage.html" class="ui-link">Dead Link</a>
+    <p><a href="#two">goto Page2</a>
+    <p><a href="#two" data-rel="dialog" data-transition="pop">goto Dialog Popup Page2</a>
+    <p><a href="#two" data-rel="dialog" data-transition="slideup">goto Dialog slideup Page2</a>
+    </div><!-- /content -->
+  <div data-role="footer">
+    <h4>Page Footer</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="two">
+  <div data-role="header">
+    <h1>Page2</h1>
+    </div><!-- /header -->
+  <div data-role="content">
+    <p>This page is 2.</p>
+    <p><a href="#one">Back to Page1</a>
     </div><!-- /content -->
   <div data-role="footer">
     <h4>Page Footer</h4>
